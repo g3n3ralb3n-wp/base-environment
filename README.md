@@ -1,5 +1,7 @@
 # Algorithms for Data Science Base Environment Setup Guide
 
+## Note: If you need further explanations and instructions on how to use this repo for submitting assignments please see [Student Workflow Guide](STUDENT_WORKFLOW.md)
+
 This guide will help you set up a Python development environment for this course using modern Python tools. All of our homeework and programming assignments were created and completed using this environment. You may add to the environment if you so choose, we are just providing a base environment to help start you on the right foot. We will update this repository as Python changes but it works as of 1/19/2026. 
 
 Claude Code wrote the instructions on how to do this for Windows as I have never used `pyenv` with Windows so mileage may vary. I would suggest using your [WSL2 Linux environment](https://learn.microsoft.com/en-us/windows/wsl/install) to do your work for this course if you are using a Windows machine. 
