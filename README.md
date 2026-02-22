@@ -198,6 +198,40 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 - **Compatible** with existing Python tools and workflows
 - **Simpler** with commands like `uv add` and `uv sync`
 
+## Included Reference Codebase
+
+Once you have the environment set up, this repository also includes Python implementations from a well-known AI algorithms textbook:
+
+- **`aima/`** — Implementations from *Artificial Intelligence: A Modern Approach* (AIMA), with interactive Jupyter notebooks
+
+This is an excellent resource for understanding how the algorithms we cover in class actually work. When you're stuck on an algorithm, look at the reference implementation first — reading real code is often more helpful than asking ChatGPT or Claude, which can hallucinate details or give you subtly incorrect explanations. The textbook code is vetted, matches the pseudocode you'll see in lectures, and will build stronger intuition than an AI-generated summary.
+
+### How to use the AIMA code
+
+**Browse the notebooks** — open any `.ipynb` file inside `aima/` with Jupyter to see worked examples and visualizations:
+
+```bash
+jupyter notebook aima/search.ipynb
+```
+
+**Import modules directly** in your own notebooks or scripts:
+
+```python
+from aima.search import astar_search, breadth_first_graph_search
+from aima.mdp import value_iteration
+from aima.csp import backtracking_search
+```
+
+> **Note:** Because `aima/` lives at the root of this repo (not installed as a package), you need to run your code from the repo root so Python can find it. If you activate the virtual environment and launch Jupyter from the repo root, imports will work automatically.
+
+**Run the AIMA test suite** to verify your understanding of how the algorithms behave:
+
+```bash
+python -m pytest aima/tests/
+```
+
+See the [`aima/README.md`](aima/README.md) for a full index of every implemented algorithm and which file it lives in.
+
 ## Additional Resources
 
 - [pyenv documentation](https://github.com/pyenv/pyenv)
