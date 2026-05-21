@@ -232,6 +232,46 @@ python -m pytest aima/tests/
 
 See the [`aima/README.md`](aima/README.md) for a full index of every implemented algorithm and which file it lives in.
 
+---
+
+## Troubleshooting
+
+**`pyenv install 3.13` fails with a build error (common on WSL2/Ubuntu):**
+
+If this is your first time setting up Python on the machine, you may be missing build prerequisites that pyenv needs to compile Python from source. Install the suggested dependencies for Ubuntu/Debian (from [pyenv's build environment guide](https://github.com/pyenv/pyenv/wiki#suggested-build-environment)):
+
+```bash
+sudo apt update
+sudo apt install make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl git \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+```
+
+Then retry:
+
+```bash
+pyenv install 3.13
+```
+
+**pyenv not found after installation:**
+- Make sure you added pyenv to your shell configuration and restarted your terminal
+
+**uv command not found:**
+- Restart your terminal after installing uv
+
+**Python version mismatch:**
+- Run `pyenv local 3.13` in the project directory
+
+**Package import errors:**
+- Make sure your virtual environment is activated: `source .venv/bin/activate`
+- Run `uv sync` to ensure all packages are installed
+
+---
+
+## Questions?
+
+If you have questions about the environment setup, please ask during office hours or post on the question and answer discussion board.
+
 ## Additional Resources
 
 - [pyenv documentation](https://github.com/pyenv/pyenv)
